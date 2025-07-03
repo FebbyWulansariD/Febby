@@ -1,0 +1,178 @@
+/* Animasi masuk dari bawah */
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek datang dari kiri untuk filter */
+.filter-button {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.filter-button.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Animasi card masuk dari kiri */
+.card-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.card-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animasi card masuk dari kanan */
+.card-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.card-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.projects-section {
+  background-color: #DC9DBA;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 32px;
+  color: #ff69b4;
+  margin-bottom: 10px;
+}
+
+.projects-desc {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+}
+
+.projects-filters {
+  margin-bottom: 30px;
+}
+
+.projects-filters button {
+  background: #ffb6c1;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.projects-filters button:hover {
+  background: #ff69b4;
+  color: white;
+}
+
+.projects-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projects-filters button.active {
+  background-color: #f4b5d4;
+  color: white;
+  font-weight: bold;
+}
+.no-projects {
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+}
+
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tags span {
+  background: #ffccdd;
+  padding: 5px 10px;
+  margin: 5px 5px 10px 0;
+  border-radius: 15px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.project-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: #ff69b4;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-buttons a:hover {
+  background-color: #e75480;
+}
+
+/* ---------- FILTER BUTTON ANIMASI ---------- */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.slide-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- PROJECT CARD ANIMASI ---------- */
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(4px);
+  transition: all 1.2s ease;
+}
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Hover efek zoom */
+.project-card:hover img {
+  transform: scale(1.05);
+}
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}

@@ -1,0 +1,104 @@
+.skills-section {
+  background-color: #E5B1C8 ; /* pink pastel lembut */
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #B0578D;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  color: #C74B91;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.skill-card {
+  background: linear-gradient(145deg, #fff0f5, #fcddec);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 24px 20px;
+  max-width: 280px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(199, 75, 145, 0.3);
+}
+
+.skill-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  color: #C74B91;
+  margin-bottom: 12px;
+}
+
+.skill-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #5a235d;
+  line-height: 1.6;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+
+/* Container untuk kontrol animasi */
+/* Animasi muncul dari bawah */
+/* Untuk semua elemen animasi dari bawah */
+.animate-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.skill-card.animate-slide {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Saat terlihat */
+.skill-card.animate-slide.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Shake saat hover */
+.skill-card:hover {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}

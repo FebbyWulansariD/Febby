@@ -1,0 +1,147 @@
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.contact-section {
+  background-color: #F0C9D8; /* Sesuaikan warna sebelumnya */
+  border-bottom-left-radius: 50px 20px;
+  border-bottom-right-radius: 50px 20px;
+  padding-top: 40px;         /* agar teks tidak terlalu menempel */
+  margin-top: -4px;          /* ini trik penting untuk menghilangkan garis putih */
+  padding-bottom: 50px;
+}
+
+.section-subtitle {
+  color: #933f60;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-box {
+  background-color: #933f60;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.contact-box h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.contact-box p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.contact-box a {
+  color: #933f60;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #933f60;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.full-width-button {
+  width: 100%;
+  background-color: #ff91b3;
+  border: none;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.full-width-button:hover {
+  background-color: #e07aa2;
+  transform: scale(1.02);
+}
+
+.contact-form button {
+  background-color: #ff91b3;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e07aa2;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeZoomUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.show {
+  animation: fadeZoomUp 0.6s ease forwards;
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffbad9;
+  display: inline-block;
+}

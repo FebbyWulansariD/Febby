@@ -1,0 +1,239 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #B56C94;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; /* Sama dengan home-container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 34px;
+  color: #ffe6f0;
+  font-weight: normal;
+}
+
+.logo .dot {
+  color: #ba68c8;
+}
+
+.navbar-container .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-container .nav-links li a {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fce5f2;
+  transition: color 0.3s;
+}
+
+.navbar-container .nav-links li a:hover {
+  color: #2cdada;
+}
+
+/* Home Section offset */
+.home-section {
+  padding-top: 214px; /* beri jarak dari navbar */
+  padding-bottom: 214px;
+  background: #CB89A6;
+}
+
+/* Home container sejajar dengan navbar */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto; /* tengahin kontainer */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px; /* kiri-kanan rata dengan navbar */
+}
+
+.home-text {
+  flex: 1;
+}
+
+/* Judul di halaman home */
+.home-text h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;   /* jarak bawah dari h1 ke h2 */
+  line-height: 1.2;
+}
+
+.home-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #ffe3f6; /* lebih terang dari #fab9e2 */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* efek glow halus */
+  margin-bottom: 0.2rem;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.home-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #ffffff; /* putih bersih agar kontras */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+  line-height: 1.2;
+}
+
+
+.highlight {
+  color: #ff4081;
+}
+
+.more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff80ab;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.more-btn:hover {
+  background-color: #f06292;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* dorong gambar ke kanan */
+}
+
+.glow-circle {
+  border-radius: 50%;
+  padding: 10px;
+  background: radial-gradient(circle at center, #90cdfc, #da5693);
+  box-shadow: 0 0 7cqw #510f5c;
+}
+
+.profile-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* Animasi Fade-in dan Slide untuk Home Section */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Terapkan animasi ke bagian Home */
+.home-text h1 {
+  animation: fadeSlideLeft 1s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.home-text h2 {
+  animation: fadeSlideLeft 1s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.home-text h3 {
+  animation: fadeSlideLeft 1s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.home-text p {
+  animation: fadeSlideLeft 1s ease forwards;
+  animation-delay: 1.1s;
+  opacity: 0;
+}
+
+/* Gambar dengan animasi dari kanan */
+.home-image {
+  animation: fadeSlideRight 1.2s ease forwards;
+  opacity: 0;
+  animation-delay: 1.4s;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.2;
+  max-width: 0;
+  padding-left: 4px;
+  transform: translateY(-2px);
+  border-right: 2px solid #fff;
+}
+
+/* Animasi hanya aktif saat class ini ditambahkan */
+.typewriter.start-type {
+  animation: typing 3.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { max-width: 0; }
+  to { max-width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fff; }
+}

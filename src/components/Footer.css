@@ -1,0 +1,94 @@
+.footer-girly {
+  position: relative;
+  background: linear-gradient(135deg, #db8fa8, #ef7da5);
+  color: #880e4f;
+  padding: 25px 15px 15px;
+  font-family: 'Poppins', sans-serif;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -3px 15px rgba(255, 192, 203, 0.3);
+  overflow: hidden;
+}
+
+/* 💕 Love Bubble Hearts 💕 */
+.footer-girly::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  animation: create-hearts 10s infinite linear;
+  opacity: 0;
+}
+
+@keyframes bubble-up {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Generate bubble heart spans secara dinamis pakai JS nanti */
+.footer-girly .heart-bubble {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2rem;
+  animation: bubble-up 4s ease-in infinite;
+  color: #ec407a;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.footer-girly-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.footer-info .brand {
+  font-size: 1.5rem;
+  color: #ad1457;
+  margin: 0;
+}
+
+.footer-info .tagline {
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: #6a1b9a;
+}
+
+.footer-social p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #d81b60;
+}
+
+.social-icons a {
+  font-size: 1.4rem;
+  margin: 0 8px;
+  color: #ec407a;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ad1457;
+}
+
+.footer-girly-bottom {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #6a1b9a;
+  border-top: 3px solid #f06292;
+  padding-top: 10px;
+}
